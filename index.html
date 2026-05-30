@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Letter to My Athletes | Mason Jordan</title>
+  <meta name="description" content="An important update from Coach Mason Jordan — Recast Coaching." />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=DM+Serif+Display:ital@0;1&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --black:     #0a0a0a;
+      --offblack:  #111111;
+      --card:      #161616;
+      --border:    #252525;
+      --muted:     #5a5a5a;
+      --subtle:    #8a8a8a;
+      --body:      #c8c8c8;
+      --white:     #f0ece4;
+      --accent:    #e85a2a;
+      --accent2:   #ff7a45;
+    }
+
+    html {
+      background: var(--black);
+      min-height: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--body);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── LAYOUT ─────────────────────────────────── */
+    .wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 24px 100px;
+    }
+
+    /* ─── HEADER ─────────────────────────────────── */
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 48px;
+      margin-bottom: 56px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .brand-lockup {
+      margin-bottom: 20px;
+    }
+
+    .brand-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(42px, 8vw, 64px);
+      color: var(--white);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-name span {
+      color: var(--accent);
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .header-meta {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .coach-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 14px 6px 6px;
+    }
+
+    .coach-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--black);
+      flex-shrink: 0;
+      letter-spacing: -0.02em;
+    }
+
+    .coach-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .date-tag {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    /* ─── DIVIDER ─────────────────────────────────── */
+    .rule {
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+      margin: 48px 0;
+    }
+
+    /* ─── BODY COPY ──────────────────────────────── */
+    .letter-body {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--body);
+    }
+
+    .letter-body p {
+      margin-bottom: 28px;
+    }
+
+    .letter-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .salutation {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--white);
+      margin-bottom: 32px !important;
+    }
+
+    strong, b {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    em {
+      font-style: italic;
+      color: #b0b0b0;
+    }
+
+    /* ─── PULL QUOTE ─────────────────────────────── */
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 4px 0 4px 24px;
+      margin: 40px 0;
+    }
+
+    .pull-quote p {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(20px, 4vw, 26px);
+      color: var(--white);
+      line-height: 1.4;
+      font-style: italic;
+      margin: 0 !important;
+    }
+
+    /* ─── CALLOUT BOX ────────────────────────────── */
+    .callout {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      padding: 28px 32px;
+      margin: 40px 0;
+    }
+
+    .callout-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .callout p {
+      font-size: 15px;
+      color: var(--body);
+      margin: 0 !important;
+      line-height: 1.7;
+    }
+
+    /* ─── SIGNATURE ──────────────────────────────── */
+    .signature-block {
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .sig-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      color: var(--white);
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+
+    .sig-title {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .sig-tagline {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ─── FOOTER ─────────────────────────────────── */
+    .footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .footer-brand span {
+      color: var(--accent);
+    }
+
+    .footer-note {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ─── ACCENT MARK ────────────────────────────── */
+    .rc-mark {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      vertical-align: middle;
+      margin: 0 2px;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────── */
+    @media (max-width: 540px) {
+      .wrapper {
+        padding: 48px 20px 72px;
+      }
+
+      .header {
+        padding-bottom: 36px;
+        margin-bottom: 40px;
+      }
+
+      .callout {
+        padding: 22px 20px;
+      }
+
+      .pull-quote {
+        padding-left: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="brand-lockup">
+        <div class="brand-name">Recast<span>.</span></div>
+        <div class="brand-sub">Coaching</div>
+      </div>
+
+      <div class="header-meta">
+        <div class="coach-pill">
+          <div class="coach-avatar">MA</div>
+          <div class="coach-name">Mason Jordan</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- LETTER BODY -->
+    <div class="letter-body">
+
+      <p class="salutation">To my athletes,</p>
+
+      <p>
+        I want to be straight with you, because that's the only way I know how to operate.
+        <strong>I'm officially parting ways with Vertis Coaching.</strong> It's a clean break,
+        made on good terms, and I'm grateful for the time I spent there. But this letter isn't
+        about closing a door. It's about what's on the other side of it.
+      </p>
+
+      <p>
+        First, the thing that matters most. <strong>You and I are not going anywhere.</strong>
+        Your training doesn't change. Your programming doesn't change. The standards we've built
+        together, the early mornings, the hard conversations about pacing and load, the stuff
+        that actually moved the needle. None of that disappears because my business address did.
+        You signed on to work with me, and I'm still here.
+      </p>
+
+      <div class="pull-quote">
+        <p>"The relationship doesn't live in a company name. It lives in the work."</p>
+      </div>
+
+      <p>
+        I want to say thank you. And I mean it. You trusted me with something real. Your time,
+        your goals, the version of yourself you're still building. Watching you get faster, get
+        tougher, figure out who you are when the miles get long. I carry that with me. You've made
+        me a better coach, and I don't take that lightly.
+      </p>
+
+      <p>
+        I came to coaching the long way. I was a 250 lb offensive lineman who walked onto a college
+        football team, and by the time I graduated, I was 60 lbs lighter and lining up as a wide
+        receiver. Then I picked up distance running from scratch and eventually qualified for Boston
+        with a 2:52 finish. I didn't have a blueprint. I had stubbornness and a willingness to learn.
+      </p>
+
+      <p>
+        That's the lens I bring to every training plan I write. There's no entitlement to
+        performance. You earn it, rep by rep, mile by mile, decision by decision. And when I coach
+        you, I'm not managing your expectations. <strong>I'm building your capacity.</strong>
+      </p>
+
+      <div class="callout">
+        <div class="callout-label">What's next</div>
+        <p>
+          Operating independently means I can build the coaching experience around you, not around
+          a company's structure or product roadmap. <strong>Recast Coaching</strong> is exactly that.
+          A practice designed from the ground up to go deeper, move faster, and actually
+          fit the way serious athletes train. There's more coming. Tools, resources, and things
+          I've been building quietly that I think you're going to find genuinely useful.
+          I'll share more soon.
+        </p>
+      </div>
+
+      <p>
+        Right now, we keep working. You keep showing up. I keep showing up. The goal doesn't move
+        just because the scenery changed.
+      </p>
+
+      <p>
+        I'm fired up about what's ahead, more than I've been in a long time. The best is in front
+        of us. Let's go get it.
+      </p>
+
+      <!-- SIGNATURE -->
+      <div class="signature-block">
+        <div class="sig-name">Mason Jordan</div>
+        <div class="sig-title">Recast Coaching</div>
+        <div class="sig-tagline">Head Coach &amp; Founder</div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-brand"><span>Recast</span> Coaching</div>
+      <div class="footer-note">Private correspondence. For athletes only.</div>
+    </footer>
+
+  </div>
+</body>
+</html>
